@@ -22,7 +22,7 @@ df["label"] = df["type"].apply(convert)
 print("\n binary level distribution")
 print(df["label"].value_counts())
 
-sample = df.head(1000).copy()
+sample = df.sample(n=10000, random_state=42).copy()
 
 feature = sample["url"].apply(extract_features)
 

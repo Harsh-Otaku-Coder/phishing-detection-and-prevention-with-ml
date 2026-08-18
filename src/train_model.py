@@ -1,3 +1,4 @@
+import joblib
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -88,3 +89,5 @@ print(gradient_accuracy)
 
 print("\ngradient boosting classification report:")
 print(classification_report(Y_test, gradient_pred))
+
+joblib.dump(Forest_model,"models/url_random_forest.pkl")
